@@ -1,0 +1,149 @@
+
+/* montaña */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', serif;
+}
+body, html {
+  overflow-x: hidden; 
+  width: 100%;
+  background-color: #fff !important;
+}
+#top{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#top::before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height:200px;
+    width: 100%;
+    background:linear-gradient(to top,#fff,transparent);
+    z-index: 1000;
+}
+#man{
+    top: inherit;
+    bottom: 0;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+/* Estilos para la sección del casette - MEJORADO */
+.cart {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: url('img/cuadrados.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté por encima de otras secciones */
+}
+
+#cliptrebol{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#floresecascorason{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+#corasones{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#gusanito{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+
+.casette-link {
+  position: absolute; /* Lo hacemos absoluto para posicionarlo respecto a su contenedor */
+  top: 8cm;
+  left: 5cm;
+  width: 25vw; /* Un tercio del ancho de la pantalla */
+  max-width: none; /* Quitamos el límite para que pueda escalar según el viewport */
+  z-index: 1001;
+}
+
+.casette {
+  position: relative; /* Relativo al contenedor .casette-link */
+  width: 100%; /* Ocupará el 33vw definido arriba */
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.casette:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+}
+
+
+/* Posiciona la carta más a la derecha */
+.carta-link {
+  position: absolute;
+  top: 6.5cm;
+  right: 5cm; /* La cambiamos a la derecha */
+  width: 25vw;
+  z-index: 1001;
+}
+
+.carta {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carta:hover {
+  transform: scale(1.1) rotate(-5deg);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+}
